@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!--
+  ElateBrain
+
+  NOTICE OF LICENSE
+
+  This source file is subject to the elatebrain.com license which is available at https://www.elatebrain.com/LICENSE.txt
+
+  DISCLAIMER
+
+  Do not edit or add to this file if you wish to upgrade this extension to newer version in the future.
+  If you wish to customize this extension for your needs, please refer to https://magento.com for more information.
+
+  @category    Elatebrain
+  @package     Elatebrain_GDPR
+  @version     1.0.1
+  @copyright   Copyright (c) 2019 Elatebrain (https://www.elatebrain.com/)
+  @license     https://www.elatebrain.com/LICENSE.txt
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <ebgdpr>
+            <general>
+                <enabled>0</enabled>
+                <access_page_content>
+                    <![CDATA[<strong>General Data Protection Regulation (GDPR)</strong> which protects personal data and privacy of all EU Citizens officially becomes effective on May 25, 2018. Therefore, to make your personal data secure and give you more data control based on GDPR, you can delete your account or send us request to anonymizing your account. We will process your request as soon as possible and notify you via your email account request status.]]>
+                </access_page_content>
+                <allow_export_customer_data>0</allow_export_customer_data>
+                <allow_delete_customer_account>0</allow_delete_customer_account>
+                <allow_delete_default_address>0</allow_delete_default_address>
+            </general>
+            <consent_config1>
+                <enabled>0</enabled>
+                <content><![CDATA[I authorize the use of my personal information, having read and accepted the Privacy Policy.]]></content>
+                <required>1</required>
+            </consent_config1>
+            <consent_config2>
+                <enabled>0</enabled>
+                <content><![CDATA[I authorize the use of my personal information, having read and accepted the Privacy Policy.]]></content>
+                <required>1</required>
+            </consent_config2>
+            <consent_config3>
+                <enabled>0</enabled>
+                <content><![CDATA[I authorize the use of my personal information, having read and accepted the Privacy Policy.]]></content>
+                <required>1</required>
+            </consent_config3>
+            <consent_config4>
+                <enabled>0</enabled>
+                <content><![CDATA[I authorize the use of my personal information, having read and accepted the Privacy Policy.]]></content>
+                <required>1</required>
+            </consent_config4>
+            <consent_config5>
+                <enabled>0</enabled>
+                <content><![CDATA[I authorize the use of my personal information, having read and accepted the Privacy Policy.]]></content>
+                <required>1</required>
+            </consent_config5>
+        </ebgdpr>
+    </default>
+</config>

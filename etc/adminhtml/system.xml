@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<!--
+  ElateBrain
+
+  NOTICE OF LICENSE
+
+  This source file is subject to the elatebrain.com license which is available at https://www.elatebrain.com/LICENSE.txt
+
+  DISCLAIMER
+
+  Do not edit or add to this file if you wish to upgrade this extension to newer version in the future.
+  If you wish to customize this extension for your needs, please refer to https://magento.com for more information.
+
+  @category    Elatebrain
+  @package     Elatebrain_GDPR
+  @version     1.0.1
+  @copyright   Copyright (c) 2019 Elatebrain (https://www.elatebrain.com/)
+  @license     https://www.elatebrain.com/LICENSE.txt
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="ebgdpr" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>GDPR</label>
+            <tab>elatebrain</tab>
+            <resource>Elatebrain_Gdpr::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="access_page_content" translate="label comment" type="editor" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Account Data Access Page Content</label>
+                    <frontend_model>Elatebrain\Core\Block\Adminhtml\Config\Source\Editor</frontend_model>
+                </field>
+                <field id="allow_export_customer_data" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Allow Customer to Export Account Data</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="allow_delete_customer_account" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Allow Customer to Delete Account</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="allow_delete_default_address" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Allow Customer to Delete Address</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="consent_config1" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Consent 1 Configuration</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="content" translate="label comment" type="editor" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Content</label>
+                    <frontend_model>Elatebrain\Core\Block\Adminhtml\Config\Source\Editor</frontend_model>
+                </field>
+                <field id="forms" translate="label comment" type="multiselect" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Select Frontend Forms</label>
+                    <source_model>Elatebrain\Gdpr\Model\Config\Source\FrontendForms</source_model>
+                </field>
+                <field id="required" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Required</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="consent_config2" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Consent 2 Configuration</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="content" translate="label comment" type="editor" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Content</label>
+                    <frontend_model>Elatebrain\Core\Block\Adminhtml\Config\Source\Editor</frontend_model>
+                </field>
+                <field id="forms" translate="label comment" type="multiselect" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Select Frontend Forms</label>
+                    <source_model>Elatebrain\Gdpr\Model\Config\Source\FrontendForms</source_model>
+                </field>
+                <field id="required" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Required</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="consent_config3" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Consent 3 Configuration</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="content" translate="label comment" type="editor" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Content</label>
+                    <frontend_model>Elatebrain\Core\Block\Adminhtml\Config\Source\Editor</frontend_model>
+                </field>
+                <field id="forms" translate="label comment" type="multiselect" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Select Frontend Forms</label>
+                    <source_model>Elatebrain\Gdpr\Model\Config\Source\FrontendForms</source_model>
+                </field>
+                <field id="required" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Required</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="consent_config4" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Consent 4 Configuration</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="content" translate="label comment" type="editor" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Content</label>
+                    <frontend_model>Elatebrain\Core\Block\Adminhtml\Config\Source\Editor</frontend_model>
+                </field>
+                <field id="forms" translate="label comment" type="multiselect" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Select Frontend Forms</label>
+                    <source_model>Elatebrain\Gdpr\Model\Config\Source\FrontendForms</source_model>
+                </field>
+                <field id="required" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Required</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="consent_config5" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Consent 5 Configuration</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="content" translate="label comment" type="editor" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Content</label>
+                    <frontend_model>Elatebrain\Core\Block\Adminhtml\Config\Source\Editor</frontend_model>
+                </field>
+                <field id="forms" translate="label comment" type="multiselect" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Select Frontend Forms</label>
+                    <source_model>Elatebrain\Gdpr\Model\Config\Source\FrontendForms</source_model>
+                </field>
+                <field id="required" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Required</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

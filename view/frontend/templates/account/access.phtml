@@ -1,0 +1,27 @@
+<div class="account_data_access">
+    <div class="data_access_content">
+        <?php echo $block->getAccountDataAccessContent(); ?>
+    </div>
+    <?php if(($allowedActions = $block->getAllowedActions()) !== false): ?>
+    <div class="actions-toolbar">
+        <?php if(in_array("delete_account",$allowedActions)): ?>
+            <button type="button" role="delete-account" data-address="" class="action primary delete_account"><span><?php echo __("Delete Account") ?></span></button>
+        <?php endif; ?>
+        <?php if(in_array("export_data",$allowedActions)): ?>
+            <button type="button" onclick="window.location='<?php echo $block->getDataExportUrl(); ?>'" class="action primary export_data"><span><?php echo __("Export Account Data") ?></span></button>
+        <?php endif; ?>
+    </div>
+    <script type="text/x-magento-init">
+    {
+        ".page-main": {
+            "address": {
+                "deleteAddress": "button[role='delete-account']",
+                "deleteUrlPrefix": "<?php echo $block->getAccountDeleteUrl(); ?>",
+                "deleteConfirmMessage": "<?php echo __('Are you sure you want to delete your account?') ?>",
+                "extraData": ""
+            }
+        }
+    }
+    </script>
+    <?php endif; ?>
+</div>

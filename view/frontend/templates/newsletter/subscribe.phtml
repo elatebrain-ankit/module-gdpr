@@ -1,0 +1,54 @@
+<?php
+/**
+ * ElateBrain
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the elatebrain.com license which is available at https://www.elatebrain.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer version in the future.
+ * If you wish to customize this extension for your needs, please refer to https://magento.com for more information.
+ *
+ * @category    Elatebrain
+ * @package     Elatebrain_GDPR
+ * @version     1.0.1
+ * @copyright   Copyright (c) 2019 Elatebrain (https://www.elatebrain.com/)
+ * @license     https://www.elatebrain.com/LICENSE.txt
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Newsletter\Block\Subscribe $block */
+
+?>
+<div class="block newsletter">
+    <div class="title"><strong><?= $block->escapeHtml(__('Newsletter')) ?></strong></div>
+    <div class="content">
+        <form class="form subscribe"
+              novalidate
+              action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+              method="post"
+              data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+              id="newsletter-validate-detail">
+            <fieldset class="fieldset create account">
+                <div class="field newsletter">
+                    <label class="label" for="newsletter"><span><?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?></span></label>
+                    <div class="control">
+                        <input name="email" type="email" id="newsletter"
+                               placeholder="<?= $block->escapeHtml(__('Enter your email address')) ?>"
+                               data-mage-init='{"mage/trim-input":{}}'
+                               data-validate="{required:true, 'validate-email':true}"/>
+                    </div>
+                </div>
+                <?php echo $block->getChildHtml('newsletter_form_additional_info') ?>
+            </fieldset>
+            <div class="actions">
+                <button class="action subscribe primary" title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>" type="submit">
+                    <span><?= $block->escapeHtml(__('Subscribe')) ?></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
